@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -38,9 +38,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2">
-              <Phone className="h-4 w-4" />
-              Book a Viewing
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2" asChild>
+              <a href="#contact">
+                <Phone className="h-4 w-4" />
+                Contact Us
+              </a>
             </Button>
           </div>
 
@@ -69,9 +71,11 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 w-full mt-2">
-              <Phone className="h-4 w-4" />
-              Book a Viewing
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 w-full mt-2" asChild>
+              <a href="#contact">
+                <Phone className="h-4 w-4" />
+                Contact Us
+              </a>
             </Button>
           </nav>
         </div>

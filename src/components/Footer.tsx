@@ -105,6 +105,19 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          <div className="mt-4 text-center">
+            <p className="text-xs text-background/40">
+              Designed by{" "}
+              <a 
+                href="https://mpncollective.co.za" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-background transition-colors"
+              >
+                MPN Collective
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

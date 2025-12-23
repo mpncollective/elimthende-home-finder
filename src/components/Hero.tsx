@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-property.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -12,12 +12,12 @@ const Hero = () => {
           alt="Modern accommodation property in Pretoria"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-2xl">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="max-w-3xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 opacity-0 animate-fade-up">
             <MapPin className="h-4 w-4 text-primary" />
@@ -37,26 +37,22 @@ const Hero = () => {
             Secure, comfortable, and conveniently located near IIE Varsity College.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up animate-delay-300">
+          {/* CTA Button */}
+          <div className="flex justify-center opacity-0 animate-fade-up animate-delay-300">
             <Button 
               size="lg" 
               className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8"
+              asChild
             >
-              View Accommodation
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-foreground text-foreground hover:bg-foreground hover:text-background text-base px-8"
-            >
-              Contact Us
+              <a href="#accommodation">
+                View Accommodation
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-border opacity-0 animate-fade-up animate-delay-400">
+          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-border opacity-0 animate-fade-up animate-delay-400 max-w-xl mx-auto">
             <div>
               <p className="text-3xl font-semibold text-foreground font-heading">12/12</p>
               <p className="text-sm text-muted-foreground mt-1">Month Leases</p>

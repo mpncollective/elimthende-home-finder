@@ -76,6 +76,7 @@ export default {
         subtle: "0 4px 20px -4px rgba(0, 0, 0, 0.08)",
         card: "0 8px 30px -8px rgba(0, 0, 0, 0.1)",
         hover: "0 12px 40px -12px rgba(0, 0, 0, 0.15)",
+        elegant: "0 2px 10px -2px rgba(0, 0, 0, 0.1), 0 4px 20px -4px rgba(0, 0, 0, 0.05)",
       },
       keyframes: {
         "accordion-down": {

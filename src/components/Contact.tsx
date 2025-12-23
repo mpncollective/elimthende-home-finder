@@ -59,7 +59,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-background border border-border text-sm font-medium text-muted-foreground mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-background/20 backdrop-blur-md border border-border/50 text-sm font-medium text-foreground mb-4">
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
@@ -76,10 +76,10 @@ const Contact = () => {
             {contactInfo.map((item, idx) => (
               <div
                 key={idx}
-                className="flex items-start gap-4 p-5 bg-card rounded-xl border border-border"
+                className="flex items-start gap-4 p-5 bg-card/80 backdrop-blur-sm rounded-xl border border-border/50 hover:border-accent/30 hover:shadow-subtle transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                  <item.icon className="h-5 w-5 text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-background/20 backdrop-blur-md border border-border/30 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="h-5 w-5 text-foreground" />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">{item.label}</p>
@@ -90,7 +90,7 @@ const Contact = () => {
             ))}
 
             {/* Trust Note */}
-            <div className="p-6 bg-card rounded-xl border border-border">
+            <div className="p-6 bg-card/80 backdrop-blur-md rounded-xl border border-border/50 shadow-subtle">
               <h4 className="font-semibold text-foreground mb-2 font-heading">
                 Why Choose Us
               </h4>
@@ -104,7 +104,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card rounded-2xl border border-border p-8">
+          <div className="bg-card/80 backdrop-blur-md rounded-2xl border border-border/50 p-8 shadow-subtle">
             <h3 className="text-xl font-semibold text-foreground mb-6 font-heading">
               Send an Enquiry
             </h3>

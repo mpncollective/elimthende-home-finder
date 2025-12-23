@@ -58,7 +58,7 @@ const Amenities = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary border border-border text-sm font-medium text-muted-foreground mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-background/20 backdrop-blur-md border border-border/50 text-sm font-medium text-foreground mb-4">
             What We Offer
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
@@ -74,10 +74,10 @@ const Amenities = () => {
           {amenities.map((amenity, index) => (
             <div
               key={index}
-              className="group p-6 bg-card rounded-xl border border-border hover:border-primary/20 hover:shadow-subtle transition-all duration-300"
+              className="group p-6 bg-card/80 backdrop-blur-sm rounded-xl border border-border/50 hover:border-accent/30 hover:shadow-subtle transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                <amenity.icon className="h-6 w-6 text-primary" />
+              <div className="w-12 h-12 rounded-lg bg-background/20 backdrop-blur-md border border-border/30 flex items-center justify-center mb-4 group-hover:bg-accent/20 group-hover:border-accent/40 transition-colors">
+                <amenity.icon className="h-6 w-6 text-foreground" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2 font-heading">
                 {amenity.title}
@@ -90,7 +90,7 @@ const Amenities = () => {
         </div>
 
         {/* Shared Areas Note */}
-        <div className="mt-16 p-8 bg-secondary rounded-2xl border border-border">
+        <div className="mt-16 p-8 bg-card/80 backdrop-blur-md rounded-2xl border border-border/50 shadow-subtle">
           <div className="flex flex-col md:flex-row md:items-center gap-6">
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-foreground mb-2 font-heading">
@@ -103,7 +103,7 @@ const Amenities = () => {
               </p>
             </div>
             <div className="flex-shrink-0">
-              <span className="inline-block px-6 py-3 bg-background rounded-lg text-sm font-medium text-foreground">
+              <span className="inline-block px-6 py-3 bg-background/20 backdrop-blur-md border border-border/30 rounded-lg text-sm font-medium text-foreground">
                 Close to IIE Varsity College
               </span>
             </div>

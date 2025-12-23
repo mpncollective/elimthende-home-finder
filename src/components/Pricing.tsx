@@ -39,7 +39,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-background/10 border border-background/20 text-sm font-medium text-background/80 mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-background/20 backdrop-blur-md border border-background/30 text-sm font-medium text-background mb-4">
             Transparent Pricing
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-background mb-6">
@@ -62,7 +62,7 @@ const Pricing = () => {
                   {section.items.map((item, itemIdx) => (
                     <div
                       key={itemIdx}
-                      className="flex items-center justify-between p-4 bg-background/5 rounded-lg border border-background/10"
+                      className="flex items-center justify-between p-4 bg-background/10 backdrop-blur-sm rounded-lg border border-background/20 hover:bg-background/15 transition-colors"
                     >
                       <span className="text-background/80">{item.label}</span>
                       <span className="font-semibold text-background">{item.value}</span>
@@ -75,15 +75,15 @@ const Pricing = () => {
 
           {/* What's Included */}
           <div>
-            <div className="bg-background/5 rounded-2xl border border-background/10 p-8">
+            <div className="bg-background/10 backdrop-blur-md rounded-2xl border border-background/20 p-8 shadow-subtle">
               <h3 className="text-xl font-semibold text-background mb-6 font-heading">
                 What's Included
               </h3>
               <ul className="space-y-4 mb-8">
                 {inclusions.map((item, idx) => (
                   <li key={idx} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="h-3 w-3 text-primary" />
+                    <div className="w-5 h-5 rounded-full bg-background/20 flex items-center justify-center flex-shrink-0">
+                      <Check className="h-3 w-3 text-background" />
                     </div>
                     <span className="text-background/80">{item}</span>
                   </li>
@@ -91,7 +91,7 @@ const Pricing = () => {
               </ul>
 
               {/* Note */}
-              <div className="flex gap-3 p-4 bg-background/5 rounded-lg border border-background/10">
+              <div className="flex gap-3 p-4 bg-background/10 backdrop-blur-sm rounded-lg border border-background/20">
                 <Info className="h-5 w-5 text-background/60 flex-shrink-0 mt-0.5" />
                 <div className="text-sm text-background/60">
                   <p className="mb-1">
@@ -105,7 +105,7 @@ const Pricing = () => {
             </div>
 
             {/* Family Houses Note */}
-            <div className="mt-6 p-6 bg-primary/10 rounded-xl border border-primary/20">
+            <div className="mt-6 p-6 bg-background/10 backdrop-blur-md rounded-xl border border-background/20 shadow-subtle">
               <h4 className="font-semibold text-background mb-2 font-heading">
                 Family Houses
               </h4>

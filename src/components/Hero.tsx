@@ -1,27 +1,32 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-property.jpg";
+import heroImage from "@/assets/background.png";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-end pb-24">
+    <section id="home" className="relative h-[calc(85vh+150px)] flex items-end pb-32">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Modern accommodation property in Pretoria"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            backgroundImage: 'linear-gradient(to top, #f5f5f5 0%, #f5f5f5 20%, rgba(245, 245, 245, 0.8) 30%, rgba(245, 245, 245, 0.4) 45%, rgba(245, 245, 245, 0.1) 60%, transparent 75%)' 
+          }} 
+        />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-12 pb-16 md:pb-32 text-center w-full">
         <div className="max-w-3xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8 opacity-0 animate-fade-up">
-            <MapPin className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-secondary-foreground">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 backdrop-blur-md border border-white/20 mb-8 opacity-0 animate-fade-up">
+            <MapPin className="h-4 w-4 text-foreground" />
+            <span className="text-sm font-medium text-foreground">
               City of Tshwane, Pretoria
             </span>
           </div>
@@ -49,22 +54,6 @@ const Hero = () => {
                 <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-border opacity-0 animate-fade-up animate-delay-400 max-w-xl mx-auto">
-            <div>
-              <p className="text-3xl font-semibold text-foreground font-heading">12/12</p>
-              <p className="text-sm text-muted-foreground mt-1">Month Leases</p>
-            </div>
-            <div>
-              <p className="text-3xl font-semibold text-foreground font-heading">Wi-Fi</p>
-              <p className="text-sm text-muted-foreground mt-1">Included</p>
-            </div>
-            <div>
-              <p className="text-3xl font-semibold text-foreground font-heading">100%</p>
-              <p className="text-sm text-muted-foreground mt-1">Managed</p>
-            </div>
           </div>
         </div>
       </div>

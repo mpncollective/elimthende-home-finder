@@ -61,11 +61,11 @@ const accommodationTypes = [
 
 const Accommodation = () => {
   return (
-    <section id="accommodation" className="py-24 bg-secondary">
+    <section id="accommodation" className="py-24 bg-secondary -mt-32 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-background border border-border text-sm font-medium text-muted-foreground mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-background/20 backdrop-blur-md border border-border/50 text-sm font-medium text-foreground mb-4">
             Our Properties
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
@@ -82,8 +82,8 @@ const Accommodation = () => {
           {accommodationTypes.map((item) => (
             <div
               key={item.id}
-              className={`bg-card rounded-2xl overflow-hidden shadow-subtle hover:shadow-hover transition-all duration-300 hover:-translate-y-1 ${
-                item.featured ? "ring-2 ring-primary" : ""
+              className={`bg-card/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-subtle hover:shadow-hover border border-border/50 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 ${
+                item.featured ? "ring-2 ring-primary/50" : ""
               }`}
             >
               {/* Image */}
@@ -94,7 +94,7 @@ const Accommodation = () => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
                 {item.featured && (
-                  <span className="absolute top-4 right-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full">
+                  <span className="absolute top-4 right-4 px-3 py-1 bg-primary/90 backdrop-blur-md text-primary-foreground text-xs font-medium rounded-full border border-primary/30 shadow-lg">
                     Popular
                   </span>
                 )}
@@ -125,7 +125,7 @@ const Accommodation = () => {
                 <ul className="space-y-2 mb-6">
                   {item.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Check className="h-4 w-4 text-primary flex-shrink-0" />
+                      <Check className="h-4 w-4 text-foreground flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
